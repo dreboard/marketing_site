@@ -8,13 +8,13 @@
     <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-fw fa-folder"></i>
-            <span>Pages</span>
+            <span>Tools</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-            <h6 class="dropdown-header">Login Screens:</h6>
-            <a class="dropdown-item" href="{{ route('profile') }}">Login</a>
-            <a class="dropdown-item" href="{{ route('profile') }}">Register</a>
-            <a class="dropdown-item" href="{{ route('profile') }}">Forgot Password</a>
+            <h6 class="dropdown-header">Template Screens:</h6>
+            <a class="dropdown-item" href="{{ route('profile') }}">Basic</a>
+            <a class="dropdown-item" href="{{ route('profile') }}">Saved</a>
+            <a class="dropdown-item" href="{{ route('profile') }}">Forgssword</a>
             <div class="dropdown-divider"></div>
             <h6 class="dropdown-header">Other Pages:</h6>
             <a class="dropdown-item" href="{{ route('profile') }}">404 Page</a>
@@ -26,9 +26,12 @@
             <i class="fas fa-fw fa-chart-area"></i>
             <span>Charts</span></a>
     </li>
-    <li class="nav-item">
-        <a class="nav-link" href="{{ route('profile') }}">
-            <i class="fas fa-fw fa-table"></i>
-            <span>Tables</span></a>
-    </li>
+    @if(Auth::user()->level < 4)
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url('front/upgrade') }}">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Upgrade</span></a>
+        </li>
+    @endif
+
 </ul>

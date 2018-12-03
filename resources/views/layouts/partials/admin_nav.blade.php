@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-    <a class="navbar-brand mr-1" href="index.html">Start Bootstrap</a>
+    <a class="navbar-brand mr-1" href="{{ route('home') }}">Start Bootstrap</a>
 
     <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
         <i class="fas fa-bars"></i>
@@ -49,6 +49,9 @@
                 <i class="fas fa-user-circle fa-fw"></i>
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                @if(Auth::user()->isAdmin == 1)
+                    <a class="dropdown-item" href="{{ route('profile') }}">Admin</a>
+                @endif
                 <a class="dropdown-item" href="{{ route('profile') }}">Profile</a>
                 <a class="dropdown-item" href="{{ route('profile') }}">Activity Log</a>
                 <div class="dropdown-divider"></div>

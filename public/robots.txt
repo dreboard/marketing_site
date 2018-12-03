@@ -1,2 +1,6 @@
 User-agent: *
-Disallow:
+Disallow: /cgi-bin/
+Disallow: /inc/
+Disallow: /admin/
+
+Sitemap: http://www.dev-php.site/sitemap.xml

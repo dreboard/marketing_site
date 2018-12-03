@@ -35,4 +35,16 @@ class HomeController extends Controller
     {
         return view('admin.profile');
     }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function upgrade()
+    {
+        return view('admin.upgrade');
+    }
+
+
 }

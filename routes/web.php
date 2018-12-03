@@ -13,13 +13,21 @@
 
 Route::get('/', 'FrontController@index');
 
+Route::prefix('front')->group(function () {
+    Route::get('/upgrade', 'HomeController@upgrade')->name('upgrade');
+
+});
+
 Auth::routes();
+
+
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/profile', 'HomeController@profile')->name('profile');
 
 
-
+Route::get('/payment_success', 'PaymentController@payment_success')->name('payment_success');
+Route::post('/subscribe', 'PaymentController@subscribe')->name('subscribe');
 
 
 
