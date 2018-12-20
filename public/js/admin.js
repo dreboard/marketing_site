@@ -78,10 +78,15 @@ module.exports = __webpack_require__(45);
 
 $(document).ready(function () {
     (function ($) {
+
+        $('#DataTableTable').hide();
+        $("#dataTblBtn").click(function () {
+            $('#DataTableTable').toggle();
+        });
+
         "use strict"; // Start of use strict
 
         // Toggle the side navigation
-
         $("#sidebarToggle").on('click', function (e) {
             e.preventDefault();
             $("body").toggleClass("sidebar-toggled");

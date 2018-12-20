@@ -21,7 +21,14 @@ Route::prefix('front')->group(function () {
 Auth::routes();
 
 
+Route::prefix('admin')->group(function () {
+    //Route::get('/template_new', 'TemplateController@new');
 
+    Route::get('/video_home', 'VideoController@home');
+    Route::get('/video_convert', 'VideoController@convert');
+
+
+});
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/profile', 'HomeController@profile')->name('profile');
 

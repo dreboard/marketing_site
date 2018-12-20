@@ -39,6 +39,10 @@ class RouteServiceProvider extends ServiceProvider
 
         $this->mapWebRoutes();
 
+        $this->mapTemplateRoutes();
+
+
+
         //
     }
 
@@ -56,6 +60,19 @@ class RouteServiceProvider extends ServiceProvider
              ->group(base_path('routes/web.php'));
     }
 
+    /**
+     * Define the "web" routes for the application.
+     *
+     * These routes all receive session state, CSRF protection, etc.
+     *
+     * @return void
+     */
+    protected function mapTemplateRoutes()
+    {
+        Route::middleware('web')
+            ->namespace($this->namespace)
+            ->group(base_path('routes/sections/templates.php'));
+    }
     /**
      * Define the "api" routes for the application.
      *

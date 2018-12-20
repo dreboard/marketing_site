@@ -1,5 +1,11 @@
 $(document).ready(function() {
     (function($) {
+
+        $('#DataTableTable').hide();
+        $( "#dataTblBtn" ).click(function() {
+            $('#DataTableTable').toggle();
+        });
+
         "use strict"; // Start of use strict
 
         // Toggle the side navigation

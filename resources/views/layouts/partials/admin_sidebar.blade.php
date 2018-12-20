@@ -12,13 +12,13 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
             <h6 class="dropdown-header">Template Screens:</h6>
-            <a class="dropdown-item" href="{{ route('profile') }}">Basic</a>
+            <a class="dropdown-item" href="{{ url('templates/new') }}">New</a>
             <a class="dropdown-item" href="{{ route('profile') }}">Saved</a>
-            <a class="dropdown-item" href="{{ route('profile') }}">Forgssword</a>
+            <a class="dropdown-item" href="{{ route('profile') }}">Custom</a>
             <div class="dropdown-divider"></div>
-            <h6 class="dropdown-header">Other Pages:</h6>
-            <a class="dropdown-item" href="{{ route('profile') }}">404 Page</a>
-            <a class="dropdown-item active" href="{{ route('profile') }}">Blank Page</a>
+            <h6 class="dropdown-header">Tools:</h6>
+            <a class="dropdown-item" href="{{ url('admin/video_home') }}">Video</a>
+            <a class="dropdown-item" href="{{ url('admin/template_new') }}">Marketing</a>
         </div>
     </li>
     <li class="nav-item">
